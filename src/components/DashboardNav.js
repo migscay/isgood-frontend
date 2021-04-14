@@ -4,13 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Dropdown from "react-bootstrap/Dropdown";
 import Badge from "react-bootstrap/Badge";
+import {Container} from 'react-bootstrap'
 
 import logo from "../assets/isgoodai-logo.png";
 import "../App.css";
 
 export default function DashboardNav() {
   return (
-    <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
+    <Container>
+      <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
       <Navbar.Brand className="font-weight-bold text-muted">
         <LinkContainer to="/dashboard">
           <Nav.Link>
@@ -64,5 +66,7 @@ export default function DashboardNav() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </Container>
+    
   );
 }
