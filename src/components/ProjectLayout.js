@@ -3,9 +3,7 @@ import {Container,Col,Row,Tab, Tabs,Nav} from 'react-bootstrap'
 import * as Icons from 'react-icons/bs';
 import * as BiIcons from 'react-icons/bi';
 import * as GoIcon from "react-icons/go";
-import './ProjectLayout.css'
 import Overview from '../containers/Pages/Overview'
-import Indicators from '../containers/Pages/Indicators'
 
 
 
@@ -43,8 +41,8 @@ const ProjectLayout = () => {
                
                     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                         <Row className="mt-4">
-                            <Col lg={3} sm={12} className="bd-toc">
-                            <Nav variant="pills" className="flex-column ">
+                            <Col lg={3} sm={12} className="">
+                            <Nav variant="pills" className="sticky-top flex-column">
                                 <Nav.Item>
                                 <Nav.Link eventKey="first" className="d-flex justify-content-center">Overview</Nav.Link>
                                 </Nav.Item>
