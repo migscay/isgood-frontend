@@ -9,8 +9,6 @@ import Welcome from "./containers/initial-setup-pages/Welcome";
 import CreateOrganisation from "./containers/initial-setup-pages/CreateOrganisation";
 import CreateProject from "./containers/initial-setup-pages/CreateProject";
 import Personalise from "./containers/initial-setup-pages/Personalise";
-import Dashboards from './containers/Pages/Dashboards'
-import Overview from './containers/Pages/Overview'
 
 export default function Routes() {
   return (
@@ -25,7 +23,7 @@ export default function Routes() {
         <Signup />
       </Route>
       <Route exact path="/projectprofilescreen">
-        <ProjectProfileScreen/>
+        <ProjectProfileScreen />
       </Route>
       <Route exact path="/welcome">
         <Welcome />
@@ -38,9 +36,6 @@ export default function Routes() {
       </Route>
       <Route exact path="/personalise">
         <Personalise />
-      </Route>
-      <Route exact path="/dashboards">
-        <Dashboards />
       </Route>
 
       {/* The NotFound Route needs to stay in the bottom to work for 404 errors*/}
