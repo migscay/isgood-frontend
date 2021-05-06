@@ -9,8 +9,6 @@ import HomePageNavbar from "../../../components/HomePageNavbar";
 //geocode
 import Autosuggest from "react-autosuggest";
 import axios from "axios";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import Error from "../../../components/Error";
 
 //Validation code
@@ -139,23 +137,27 @@ export default function CreateProject3() {
             <Form.Row>
               <Form.Group as={Col} controlId="startDate" size="lg">
               <Form.Label>Start Date</Form.Label>
-              <DatePicker 
-                  selected={startDate} 
-                  onChange={date => {setStartDate(date);
-                                     formik.setFieldValue("startDate",date); 
-                                    } 
-                                  } />
+              <Form.Control
+                    name="startDate"
+                    type="date"
+                    onClick={() => setServerMessage(null)}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.startDate}
+                  />
               <Error touched={formik.touched.startDate} message={formik.errors.startDate} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="endDate" size="lg">
               <Form.Label>End Date</Form.Label>
-              <DatePicker 
-                  selected={endDate} 
-                  onChange={date => {setEndDate(date)
-                                     formik.setFieldValue("endDate",date);    
-                                    } 
-                                  } />
+              <Form.Control
+                    name="endDate"
+                    type="date"
+                    onClick={() => setServerMessage(null)}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.endDate}
+                  />
               <Error touched={formik.touched.endDate} message={formik.errors.endDate} />
                     
             </Form.Group>
